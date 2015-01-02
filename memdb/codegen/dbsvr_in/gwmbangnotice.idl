@@ -1,0 +1,10 @@
+typedef struct _t_gwm_bangnotice_req : public IRequest
+{
+    uint16      m_nBangID;
+    std::string m_strMsg;    
+}CGWMBangNoticeRequest;
+
+typedef struct _t_gwm_bangnotice_resp : public IResponse
+{
+    uint32 m_nRetCode;
+}CGWMBangNoticeResponse;

@@ -1,0 +1,32 @@
+//#include <gateway/banginfomsg.idl>
+#define NUMBER 0
+
+//enum MYENUM{
+//	KKK = 8,
+//	JJJ = 0x008,
+//};
+
+typedef struct _t_req_gwm_bangmemberoper	: public IRequest
+{
+    //1：申请加入2: 邀请加入 3：同意加入 4:邀请确认 5:邀请取消6：踢出队员7：升命副帮主 8.任命长老9.任命堂主 10：任命香主 11：任命精英 12.解聘官员 
+	uint8 m_nOperType;
+	uint16 m_nBangID;
+	//CBangMemberInfo m_cMemberInfo;
+	uint32 m_nPlayerID;
+	uint8 m_nNation;
+	uint8 m_nOperTpe;
+	uint16 m_nBngID;
+	//CBangMemberInfo m_cMemberInfo;
+	uint32 m_nPlayrID;
+	uint8 m_nNaion;
+	uint8 m_OperType;
+	uint16 nBangID;
+	//CBangMemberInfo m_cMemberInfo;
+	uint32 m_nlayerID;
+	uint8 m_nation;
+}CGWMBangMemberOperRequest;
+
+typedef struct _t_rep_gwm_bangmemberoper : public IResponse
+{
+	uint32 m_nRetCode;
+}CGWMBangMemberOperResponse;

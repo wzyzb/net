@@ -1,0 +1,75 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+PROJECT(myEngine)
+
+SET(CMAKE_BUILE_TYPE Debug)
+SET(COMP_FLAGS "-ggdb -Wall")
+
+#SET(LINK_LIB_PATH "${CMAKE_SOURCE_DIR}")
+#include_directories("./")
+
+message(status " PROJECT_NAME = ${PROJECT_NAME} ")
+message(status " CMAKE_BUILE_TYPE= ${CMAKE_BUILE_TYPE} ")
+message(status " COMP_FLAGS = ${COMP_FLAGS} ")
+
+
+FILE(GLOB_RECURSE SRC_LIST "*.cpp")
+
+FOREACH(src ${SRC_LIST})
+message(status "${src} ")
+ENDFOREACH()
+
+
+ADD_LIBRARY( ${PROJECT_NAME} STATIC ${SRC_LIST} )
+
+SET_TARGET_PROPERTIES(${PROJECT_NAME}
+		PROPERTIES 
+		COMPILE_FLAGS ${COMP_FLAGS}
+)
+
+message(status "${PROJECT_SOURCE_DIR}")
+INCLUDE_DIRECTORIES($({PROJECT_SOURCE_DIR}/include))
+
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+ADD_EXECUTABLE(hello test.cpp Hello.cpp)
+
+SET(LIBRARY_OUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+ADD_LIBRARY(hello_so SHARED Hello.cpp)
+SET_TARGET_PROPERTIES(hello_so PROPERTIES OUTPUT_NAME "hello")
+
+
+ADD_LIBRARY(hello_a STATIC Hello.cpp)
+SET_TARGET_PROPERTIES(hello_a PROPERTIES OUTPUT_NAME "hello")
+
+MESSAGE(STATUS $ENV{HOME}) #显示系统的HOME环境变量的值
+# 注意，这里指定绝对路径。  
+INCLUDE_DIRECTORIES($ENV{HOME}/workspace/HelloWorld/include)  
+# 指定库文件查找目录（不能只指定头文件，也需要连接到库文件）  
+# 注意，这里指定绝对路径, 也可通过设置系统环境变量LD_LIBRARY_PATH来指定。  
+LINK_DIRECTORIES($ENV{HOME}/workspace/HelloWorld/lib)  
+# 生成可执行文件到项目的bin目录  
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)  
+ADD_EXECUTABLE(main main.cpp)  
+# 制定链接的外部Lib  
+TARGET_LINK_LIBRARIES(main libhello.a)  
+
+
+# CMAKE_BUILD_TYPE：工程的编译生成的版本类型，可选项包括Debug，Release，RelWithDebInfo和MinSizeRel。
+# CMAKE_COMMAND：也就是CMake可执行文件本身的全路径，例如/usr/local/bin/cmake或者C:\Program Files\CMake 2.6\bin\cmake.exe。
+# CMAKE_DEBUG_POSTFIX：Debug版本生成目标的后缀，通常可以设置为“d”字符，例如Debug版本的OSG核心库为osgd.dll，而Release版为osg.dll。
+# CMAKE_GENERATOR：编译器名称，例如“Unix Makefiles”，“Visual Studio 7”等。
+# CMAKE_INSTALL_PREFIX：工程安装目录，所有生成和调用所需的可执行程序，库文件，头文件都会安装到该路径下，Unix/Linux下默认为/usr/local，Windows下默认为C:\Program Files。
+# CMAKE_MODULE_PATH：设置搜索CMakeModules模块（.cmake）的额外路径。
+# PROJECT_BINARY_DIR：工程生成工作所在的目录，即前文所述的“out-of-source”的目录；对于“in-source”形式的编译工作，该变量与PROJECT_SOURCE_DIR所指向的目录相同。
+# PROJECT_NAME：工程名称，即使用PROJECT命令设置的名称。
+# PROJECT_SOURCE_DIR：工程源代码文件所在的目录。
+# CYGWIN：标识当前系统是否为Cygwin。
+# MSVC：标识当前系统是否使用Microsoft Visual C。
+# UNIX：标识当前系统是否为Unix系列（包括Linux，Cygwin和Apple）。
+# WIN32：标识当前系统是否为Windows及Win64。
+
+
+
+
+
+

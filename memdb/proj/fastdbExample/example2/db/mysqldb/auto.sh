@@ -1,0 +1,1 @@
+link ../../../build/linux/auto.sh

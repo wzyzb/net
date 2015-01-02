@@ -1,0 +1,3 @@
+D:/engine/libevent-thread/libevent-thread/vs/CMakeFiles/ALL_BUILD.dir
+D:/engine/libevent-thread/libevent-thread/vs/CMakeFiles/ZERO_CHECK.dir
+D:/engine/libevent-thread/libevent-thread/vs/CMakeFiles/libeventThreadSample.dir

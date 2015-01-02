@@ -1,0 +1,24 @@
+
+typedef struct _t_gwm_auctionget_req : public IRequest
+{
+	uint32 m_nPlayerID;
+	uint32 m_nUniqueID;
+	std::string m_strPlayerName;
+	//CAvatarwallet m_stWallet;
+}CGWMAuctionGetRequest;
+
+typedef struct _t_gwm_aiddonget_req : public IResponse
+{
+	uint32 m_nPlayerID;
+	uint32 m_nUniqueID;
+	std::string m_strPlayerName;
+	//CAvatarwallet m_stWallet;
+}CGWMAuGetReddddquest;
+
+typedef struct _t_gwm_aionget_req : public IRequest
+{
+	uint32 m_nPlayerID;
+	uint32 m_nUniqueID;
+	std::string m_strPlayerName;
+	//CAvatarwallet m_stWallet;
+}CGWMAuGetRequest;

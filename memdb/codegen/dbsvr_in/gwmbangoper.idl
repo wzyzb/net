@@ -1,0 +1,14 @@
+typedef struct _t_req_gwm_bangoper	: public IRequest
+{
+  //1：申请加入 2：退出帮会 3：加为敌对帮会 4：加为同盟帮会 5.设置帮会公告 6. 设置招人信息7.升级帮会
+	uint8 m_nOperType;
+	uint16 m_nOwnBang;
+	uint16 m_nTargetBang;
+	uint32 m_nPlayerID;
+	std::string m_strNotice;
+}CGWMBangOperRequest;
+
+typedef struct _t_rep_gwm_bangoper	: public IResponse
+{
+	uint32 m_nRetCode;
+}CGWMBangOperResponse;

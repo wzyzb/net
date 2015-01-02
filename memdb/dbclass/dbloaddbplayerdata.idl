@@ -1,0 +1,10 @@
+#include <./dbtable.idl>
+typedef struct _t_db_loaddbplayerdata_req :public IRequest
+{
+	uint32 m_nPlayerID;
+}CDBLoadDBPlayerDataRequest;
+typedef struct _t_db_loaddbplayerdata_rep :public IResponse
+{
+	uint32 m_nRetCode;
+}CDBLoadDBPlayerDataResponse;
+#endif

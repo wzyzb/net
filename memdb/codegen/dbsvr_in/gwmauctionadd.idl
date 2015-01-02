@@ -1,0 +1,15 @@
+#include "gwmauctionget.idl"
+typedef struct _t_gwm_auctionadd_req : public IRequest
+{
+	uint8 m_nAction;
+	vector<uint32> m_nPlayerID;
+	//vector<uint8> m_vecPlayerLev;
+	//AUCTION_INFO m_infoAuction;
+}CGWMAuctionAddRequest;
+
+typedef struct _t_oper : public IRequest
+{
+	uint8 operatype;
+	uint32 serial;
+	CGWMAuctionGetRequest jj;
+}COperRequest;

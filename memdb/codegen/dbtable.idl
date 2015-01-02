@@ -1,0 +1,3309 @@
+typedef struct _t_tb_account_record
+{
+	uint32 id; 
+	std::string loginname; 
+	std::string password; 
+	std::string last_login_ip; 
+	uint64 created_date; 
+	uint8 status; 
+	uint64 last_modified_date; 
+} tb_account_record;
+
+
+typedef struct _t_tb_activity_record
+{
+	uint32 id; 
+	std::string name; 
+	std::string content; 
+	uint64 start_date; 
+	uint64 award_date; 
+	uint64 finish_date; 
+	std::string activityinfo; 
+	uint32 activity_type; 
+	uint64 platform; 
+	std::string rule; 
+	std::string getway; 
+	uint8 awardstar; 
+	uint8 is_send; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_activity_record;
+
+
+typedef struct _t_tb_activity_email_record
+{
+	uint32 id; 
+	uint32 activity_id; 
+	uint32 gift_id; 
+	std::string title; 
+	std::string contents; 
+	uint64 item1; 
+	uint64 item2; 
+	uint64 item3; 
+	uint32 money_gcy; 
+	uint32 money_ccy; 
+	uint32 money_gcy_b; 
+	uint32 money_ccy_b; 
+	uint8 min_level; 
+	uint8 max_level; 
+	uint8 profession_limit; 
+	uint64 send_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_activity_email_record;
+
+
+typedef struct _t_tb_activity_gift_record
+{
+	uint32 id; 
+	uint32 activity_id; 
+	uint32 gift_id; 
+	uint8 reward_type; 
+	std::string item; 
+	std::string rule; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+	std::string completer; 
+} tb_activity_gift_record;
+
+
+typedef struct _t_tb_activity_rank_record
+{
+	uint32 id; 
+	uint32 activity_id; 
+	uint32 player_id; 
+	uint32 value; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_activity_rank_record;
+
+
+typedef struct _t_tb_all_items_record
+{
+	uint64 id; 
+	uint32 item_id; 
+	uint32 owner_id; 
+	std::string info; 
+	uint64 valid_time; 
+	uint32 count; 
+	uint8 item_status; 
+	uint8 endurance; 
+	uint8 starlevel; 
+	uint8 maintype; 
+	uint32 mainvalue; 
+	uint32 hole1; 
+	uint32 hole2; 
+	uint32 hole3; 
+	uint8 set_id; 
+	uint32 data1; 
+	uint32 data2; 
+	uint32 data3; 
+	uint32 data4; 
+	uint32 data5; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_all_items_record;
+
+
+typedef struct _t_tb_bang_distlist_record
+{
+	uint32 id; 
+	uint32 dist_id; 
+	uint32 scene; 
+	uint32 bang_id; 
+	uint32 dist_type; 
+	std::string item_name; 
+	std::string item_source; 
+	uint32 getitem_playerid; 
+	uint32 auction_money; 
+	uint32 dist_playerid; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_bang_distlist_record;
+
+
+typedef struct _t_tb_bang_list_record
+{
+	uint32 id; 
+	uint32 createor_id; 
+	uint8 bang_level; 
+	std::string bang_name; 
+	uint8 national; 
+	std::string qq_group; 
+	std::string qq_talk; 
+	std::string notice; 
+	uint8 profession_limit; 
+	uint8 level_limit; 
+	uint8 vip_limit; 
+	uint8 auto_enter_flag; 
+	uint8 not_receive_unmet_apply_flag; 
+	uint8 bang_skill_tower_level; 
+	uint8 bang_monster_jieshu_upperlimit; 
+	uint8 bang_monster_jieshu_lowerlimit; 
+	uint32 bang_monster_growup_value; 
+	uint32 bang_monster_jieshu; 
+	uint32 bang_monster_hp; 
+	uint32 fund; 
+	uint32 delate_playerid; 
+	uint32 delate_time; 
+	uint32 qt_room_number; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_bang_list_record;
+
+
+typedef struct _t_tb_bang_log_record
+{
+	uint32 id; 
+	uint32 bang_id; 
+	uint8 log_type; 
+	uint64 log_date; 
+	std::string log_content; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_bang_log_record;
+
+
+typedef struct _t_tb_bang_playerlist_record
+{
+	uint32 bang_id; 
+	uint32 player_id; 
+	uint8 position; 
+	uint32 day_devote_gcy; 
+	uint32 current_task; 
+	uint32 last_day_devote_gcy_time; 
+	uint32 devote_bang_fund; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_bang_playerlist_record;
+
+
+typedef struct _t_tb_battle_record_record
+{
+	uint64 id; 
+	uint64 player_count; 
+	uint32 battle_count; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_battle_record_record;
+
+
+typedef struct _t_tb_celebrity_record
+{
+	uint32 id; 
+	std::string name; 
+	std::string item; 
+	std::string rule; 
+	std::string completers; 
+	uint8 progress; 
+	std::string title; 
+	std::string contents; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_celebrity_record;
+
+
+typedef struct _t_tb_city_conquer_record
+{
+	uint8 city_id; 
+	uint8 map_national; 
+	uint32 conqueror_bangid; 
+	uint8 conqueror_national; 
+	uint32 guard_npc_id; 
+	uint32 guard_monster_id; 
+	std::string revive_point; 
+	uint64 conquer_date; 
+	uint32 last_tax_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_city_conquer_record;
+
+
+typedef struct _t_tb_city_war_record
+{
+	uint32 id; 
+	uint64 begin_time; 
+	uint64 end_time; 
+	uint8 phase; 
+	uint8 phase_status; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_city_war_record;
+
+
+typedef struct _t_tb_city_war_battle_record
+{
+	uint32 id; 
+	uint32 war_id; 
+	uint8 national; 
+	uint8 round; 
+	uint32 bang_id; 
+	uint8 battle_status; 
+	std::string info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_city_war_battle_record;
+
+
+typedef struct _t_tb_copy_recordholder_record
+{
+	uint32 id; 
+	uint32 copy_id; 
+	uint8 copy_level; 
+	uint32 copy_sence; 
+	uint32 player_id; 
+	uint8 player_level; 
+	uint32 score; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 lastmodified_date; 
+} tb_copy_recordholder_record;
+
+
+typedef struct _t_tb_currency_market_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 currency_type; 
+	uint32 unit_price; 
+	uint32 total_count; 
+	uint32 remain_count; 
+	uint64 valid_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_currency_market_record;
+
+
+typedef struct _t_tb_function_control_record
+{
+	uint64 id; 
+	uint32 function_id; 
+	uint8 flag; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_function_control_record;
+
+
+typedef struct _t_tb_hist_bang_consume_record
+{
+	uint32 id; 
+	uint8 oper_type; 
+	uint32 player_id; 
+	uint32 bang_id; 
+	uint32 inc_bangdonate; 
+	uint32 dec_bangdonate; 
+	uint32 after_bangdonate; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_bang_consume_record;
+
+
+typedef struct _t_tb_hist_bang_distlist_record
+{
+	uint32 id; 
+	uint32 dist_id; 
+	uint32 scene; 
+	uint32 bang_id; 
+	uint32 dist_type; 
+	uint32 player_count; 
+	uint32 auction_count; 
+	std::string item_name; 
+	std::string item_source; 
+	uint32 getitem_playerid; 
+	uint32 auction_money; 
+	uint32 dist_playerid; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_bang_distlist_record;
+
+
+typedef struct _t_tb_hist_bang_skill_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 bang_skill_level; 
+	uint8 bang_skill_index; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_bang_skill_record;
+
+
+typedef struct _t_tb_hist_currency_change_record
+{
+	uint64 id; 
+	uint32 flow_type; 
+	uint32 player_id; 
+	uint32 charge_cy; 
+	uint32 charge_cyb; 
+	uint32 game_cy; 
+	uint32 game_cyb; 
+	uint32 after_charge_cy; 
+	uint32 after_charge_cyb; 
+	uint32 after_game_cy; 
+	uint32 after_game_cyb; 
+	uint32 action_id; 
+	uint8 platform_id; 
+	std::string platform; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_currency_change_record;
+
+
+typedef struct _t_tb_hist_currency_market_record
+{
+	uint32 hist_id; 
+	uint32 id; 
+	uint32 player_id; 
+	uint8 currency_type; 
+	uint32 unit_price; 
+	uint32 total_count; 
+	uint32 remain_count; 
+	uint64 valid_date; 
+	uint8 oper_type; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_currency_market_record;
+
+
+typedef struct _t_tb_hist_currency_market_flow_record
+{
+	uint64 id; 
+	uint32 market_id; 
+	uint32 seller_id; 
+	uint32 buyer_id; 
+	uint8 oper_type; 
+	uint8 currency_type; 
+	uint32 unit_price; 
+	uint32 deal_count; 
+	uint64 deal_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_currency_market_flow_record;
+
+
+typedef struct _t_tb_hist_itemoper_record
+{
+	uint64 id; 
+	uint64 player_item_id; 
+	uint32 player_id; 
+	uint32 item_id; 
+	uint8 oper_type; 
+	uint32 count; 
+	uint32 remain_count; 
+	uint32 action_id; 
+	uint32 shop_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_itemoper_record;
+
+
+typedef struct _t_tb_hist_oper_player_record
+{
+	uint64 id; 
+	uint32 player_id; 
+	uint8 oper_type; 
+	std::string info; 
+	std::string reason; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_oper_player_record;
+
+
+typedef struct _t_tb_hist_pet_skill_record
+{
+	uint32 id; 
+	uint32 pet_id; 
+	uint32 skill_id; 
+	uint8 skill_level; 
+	uint64 last_use_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_pet_skill_record;
+
+
+typedef struct _t_tb_hist_player_actdegree_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 actdegree_id; 
+	uint32 actdegree_point; 
+	uint8 hasfastfinished; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_actdegree_record;
+
+
+typedef struct _t_tb_hist_player_actionlog_record
+{
+	uint64 id; 
+	uint32 player_id; 
+	uint32 action_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_actionlog_record;
+
+
+typedef struct _t_tb_hist_player_activity_data_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 activity_id; 
+	std::string data_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_activity_data_record;
+
+
+typedef struct _t_tb_hist_player_activity_gift_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 activity_id; 
+	uint32 gift_id; 
+	uint64 award_date; 
+	uint8 award_type; 
+	std::string data_info; 
+	std::string take_itemid; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_activity_gift_record;
+
+
+typedef struct _t_tb_hist_player_activity_reward_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 activity_id; 
+	uint32 gift_id; 
+	uint32 item_id; 
+	uint32 count; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_activity_reward_record;
+
+
+typedef struct _t_tb_hist_player_battle_score_record
+{
+	uint64 id; 
+	uint32 player_id; 
+	uint32 oper_type; 
+	uint32 score; 
+	uint32 beforescore; 
+	uint32 afterscore; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_battle_score_record;
+
+
+typedef struct _t_tb_hist_player_death_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 killer_id; 
+	uint8 killer_type; 
+	uint16 map_id; 
+	uint32 map_x; 
+	uint32 map_y; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+	uint8 status; 
+} tb_hist_player_death_record;
+
+
+typedef struct _t_tb_hist_player_email_record
+{
+	uint64 hist_id; 
+	uint64 id; 
+	uint32 sender_id; 
+	std::string sender_name; 
+	uint32 receiver_id; 
+	std::string receiver_name; 
+	std::string title; 
+	std::string contents; 
+	uint64 item1; 
+	uint64 item2; 
+	uint64 item3; 
+	uint32 money_gcy; 
+	uint32 money_ccy; 
+	uint32 need_money_gcy; 
+	uint32 need_money_ccy; 
+	uint64 send_date; 
+	uint8 read_type; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_email_record;
+
+
+typedef struct _t_tb_hist_player_level_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 level; 
+	uint32 current_exp; 
+	uint8 last_exp_type; 
+	uint8 map_id; 
+	uint32 map_x; 
+	uint32 map_y; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_level_record;
+
+
+typedef struct _t_tb_hist_player_pet_record
+{
+	uint32 hist_id; 
+	uint32 id; 
+	uint32 monster_id; 
+	uint32 item_id; 
+	uint32 player_id; 
+	std::string name; 
+	uint32 current_title; 
+	uint8 attack_type; 
+	uint8 use_level; 
+	uint8 startlev; 
+	uint32 lin; 
+	uint32 strength_quality; 
+	uint32 vitality_quality; 
+	uint32 intelligence_quality; 
+	uint32 spirit_quality; 
+	uint32 agility_quality; 
+	uint32 strength_quality_max; 
+	uint32 vitality_quality_max; 
+	uint32 intelligence_quality_max; 
+	uint32 spirit_quality_max; 
+	uint32 agility_quality_max; 
+	uint8 current_level; 
+	uint32 current_exp; 
+	uint8 produce_times; 
+	uint32 pet_score; 
+	uint32 max_hp; 
+	uint32 hp; 
+	uint32 strength; 
+	uint32 vitality; 
+	uint32 intelligence; 
+	uint32 spirit; 
+	uint32 agility; 
+	uint32 critical; 
+	uint32 happy; 
+	uint8 talent; 
+	uint32 life_year; 
+	uint8 max_skillnum; 
+	uint8 current_skillnum; 
+	uint8 generation; 
+	uint32 phy_atk; 
+	uint32 magic_atk; 
+	uint32 phy_def; 
+	uint32 magic_def; 
+	uint8 pet_status; 
+	uint8 callout_type; 
+	uint8 atkmode; 
+	uint8 sex; 
+	uint8 quality; 
+	uint8 lucky; 
+	uint64 dead_time; 
+	uint32 talent_skill_exp; 
+	uint32 friendly; 
+	std::string ca_states; 
+	uint32 final_phy_atk; 
+	uint32 final_magic_atk; 
+	uint32 final_phy_def; 
+	uint32 final_magic_def; 
+	uint32 final_critical; 
+	uint32 final_maxhp; 
+	uint32 travel_time; 
+	uint8 quality_type; 
+	std::string talent_skills; 
+	uint32 damage; 
+	uint32 ignoredef; 
+	uint32 phy_risist; 
+	uint32 magic_risist; 
+	uint32 phy_absorb; 
+	uint32 magic_absorb; 
+	uint32 ignoredefdef; 
+	uint32 criticaldef; 
+	uint32 breakpower; 
+	uint32 quality_reset_times; 
+	uint8 blood_look; 
+	uint8 blood_look_lock; 
+	uint8 blood_level; 
+	uint8 blood_exp; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_pet_record;
+
+
+typedef struct _t_tb_hist_player_pet_opt_record
+{
+	uint64 id; 
+	uint32 player_id; 
+	uint32 pet_id; 
+	uint32 item_id; 
+	uint32 pet_type; 
+	uint32 pet_lvl; 
+	uint8 opt_type; 
+	uint8 shen_tong; 
+	uint8 reset_lin; 
+	uint8 reset_quality; 
+	uint8 reset_growup; 
+	uint8 breed_num; 
+	uint64 opt_time; 
+	uint8 blood_level; 
+	uint8 blood_exp; 
+	uint8 status; 
+	uint64 created_time; 
+	uint64 last_modified_time; 
+} tb_hist_player_pet_opt_record;
+
+
+typedef struct _t_tb_hist_player_task_record
+{
+	uint32 hist_id; 
+	uint32 id; 
+	uint32 player_id; 
+	uint32 task_id; 
+	uint8 task_type; 
+	uint8 task_quality; 
+	uint64 begin_time; 
+	uint64 finish_time; 
+	std::string task_gain; 
+	uint8 task_status; 
+	std::string task_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_task_record;
+
+
+typedef struct _t_tb_hist_player_trade_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 target_id; 
+	uint8 trade_type; 
+	uint32 charge_cy; 
+	uint32 game_cy; 
+	std::string items; 
+	uint32 action_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_hist_player_trade_record;
+
+
+typedef struct _t_tb_national_record
+{
+	uint8 national; 
+	std::string name; 
+	uint32 control_power; 
+	uint32 no_leader_days; 
+	uint32 no_leader_days_update; 
+	uint32 admired_times; 
+	uint32 dispised_times; 
+	uint32 brick_num; 
+	uint32 national_brick_inc; 
+	std::string national_memo; 
+	uint32 token_times; 
+	uint32 token_date; 
+	std::string main_map_id; 
+	uint32 npc_id; 
+	uint8 npc_map_id; 
+	uint32 war_npc_id; 
+	std::string war_revice_point; 
+	std::string border_point; 
+	std::string change_national_point; 
+	uint32 strength; 
+	uint32 last_pop_weaknational_times; 
+	uint32 qt_room_number; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_record;
+
+
+typedef struct _t_tb_national_pos_record
+{
+	uint32 player_id; 
+	uint8 national; 
+	uint8 position_id; 
+	uint8 has_right; 
+	uint32 admired_times; 
+	uint32 dispised_times; 
+	uint32 begin_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_pos_record;
+
+
+typedef struct _t_tb_national_pos_election_record
+{
+	uint32 id; 
+	uint8 national; 
+	uint8 position_id; 
+	uint8 phase; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_pos_election_record;
+
+
+typedef struct _t_tb_national_pos_election_enrol_record
+{
+	uint32 id; 
+	uint32 election_id; 
+	uint32 player_id; 
+	uint8 confirm; 
+	uint32 book_unit_price; 
+	uint32 book_remain_price; 
+	uint32 vote_count; 
+	uint32 total_price; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_pos_election_enrol_record;
+
+
+typedef struct _t_tb_national_pos_playervote_record
+{
+	uint32 election_id; 
+	uint32 player_id; 
+	uint32 candidate_id; 
+	uint32 vote_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_pos_playervote_record;
+
+
+typedef struct _t_tb_national_war_record
+{
+	uint32 id; 
+	uint64 begin_time; 
+	uint64 end_time; 
+	uint8 phase; 
+	uint8 phase_status; 
+	uint8 group_a1; 
+	uint8 group_a2; 
+	uint8 group_b1; 
+	uint8 group_b2; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_war_record;
+
+
+typedef struct _t_tb_national_war_battle_record
+{
+	uint32 id; 
+	uint32 war_id; 
+	uint8 national_a; 
+	uint8 national_b; 
+	uint8 confirm; 
+	uint8 attack_result; 
+	uint8 cattack_result; 
+	uint64 attack_date; 
+	uint8 phase_status; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_war_battle_record;
+
+
+typedef struct _t_tb_national_war_groups_record
+{
+	uint32 id; 
+	uint8 group_a1; 
+	uint8 group_a2; 
+	uint8 group_b1; 
+	uint8 group_b2; 
+	uint8 used; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_war_groups_record;
+
+
+typedef struct _t_tb_national_war_score_record
+{
+	uint32 player_id; 
+	uint32 score; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_national_war_score_record;
+
+
+typedef struct _t_tb_player_record
+{
+	uint32 id; 
+	uint64 battle_id; 
+	uint32 user_id; 
+	std::string nickname; 
+	uint8 sex; 
+	uint8 profession_id; 
+	uint8 current_level; 
+	uint32 current_exp; 
+	uint32 offline_exp; 
+	uint32 offline_time; 
+	uint32 current_title; 
+	uint32 current_orange_title; 
+	uint32 current_blue_title; 
+	uint32 current_green_title; 
+	uint8 national; 
+	uint32 strength; 
+	uint32 vitality; 
+	uint32 intelligence; 
+	uint32 spirit; 
+	uint32 agility; 
+	uint32 speed; 
+	uint32 battle_effect; 
+	uint32 hp; 
+	uint32 mp; 
+	uint32 critical; 
+	uint32 dodge; 
+	uint32 hit; 
+	uint8 phy_attack_level; 
+	uint8 mag_attack_level; 
+	uint8 phy_defence_level; 
+	uint8 mag_defence_level; 
+	uint32 angerpoint; 
+	uint8 pk_mode; 
+	uint32 varity; 
+	uint32 over_varity; 
+	uint32 pk_point; 
+	uint32 skill_point; 
+	uint8 skill_prof; 
+	uint32 battle_fame; 
+	uint32 literary_score; 
+	uint32 achieve_score; 
+	uint32 dreamland_score; 
+	uint8 battlefieldid; 
+	uint8 mapcopyid; 
+	uint32 mapcopy_data; 
+	uint8 mapid; 
+	uint32 mapx; 
+	uint32 mapy; 
+	uint8 direction; 
+	uint8 bagsize; 
+	uint8 warehouse_size; 
+	uint8 hoursesize; 
+	uint8 pet_size; 
+	uint32 bang_id; 
+	uint32 game_cy; 
+	uint32 game_cy_bind; 
+	uint32 charge_cy_bind; 
+	std::string lock_password; 
+	uint32 national_forbidspeak_time; 
+	uint64 gag_starttime; 
+	uint32 admired_times; 
+	uint32 despised_times; 
+	uint32 glodreset_times; 
+	uint64 glodreset_date; 
+	uint32 vip_total_exp; 
+	uint8 vip_level; 
+	uint32 last_update_vip_exp; 
+	uint64 vip_valid_time; 
+	uint32 vip_timeout_notice_date; 
+	uint32 vip_calc_ret_date; 
+	uint32 vip_ret_days; 
+	uint32 vip_ret_money; 
+	uint32 last_vipgain_date; 
+	uint32 charm_value; 
+	uint8 charm_symbol; 
+	uint32 flower_count; 
+	uint32 revive_times; 
+	uint32 player_status; 
+	uint64 last_login_date; 
+	uint64 last_success_logout_time; 
+	uint32 last_change_national_day; 
+	uint32 current_volume_type; 
+	uint32 current_volume_level; 
+	uint32 last_volume_time; 
+	uint32 stolen_player1; 
+	uint32 stolen_player2; 
+	uint32 stolen_player3; 
+	uint8 soulequip_level; 
+	uint8 soulequip_atk; 
+	uint8 soulequip_phydef; 
+	uint8 soulequip_magicdef; 
+	uint8 soulequip_soul; 
+	uint8 soulequip_hp; 
+	uint32 soulequip_exp; 
+	uint32 soulequip_skill; 
+	uint32 soulequip_color; 
+	uint32 soulequip_star; 
+	uint8 player_settings; 
+	std::string medicine_count; 
+	uint32 massmail_id; 
+	uint32 total_bang_donate; 
+	uint32 current_bang_donate; 
+	uint32 bang_feed_monster_score; 
+	uint32 last_feed_monster_time; 
+	uint8 isautomsg; 
+	std::string automsg; 
+	uint8 user_type; 
+	uint8 vip_type; 
+	uint8 bang_win_flag; 
+	uint32 last_openchest_time; 
+	uint8 openchest_count; 
+	uint32 last_openbindchest_time; 
+	uint8 openbindchest_count; 
+	uint8 cronjob_flag; 
+	uint8 gold_soul_lv; 
+	uint32 gold_soul_exp; 
+	uint8 wood_soul_lv; 
+	uint32 wood_soul_exp; 
+	uint8 water_soul_lv; 
+	uint32 water_soul_exp; 
+	uint8 fire_soul_lv; 
+	uint32 fire_soul_exp; 
+	uint8 soil_soul_lv; 
+	uint32 soil_soul_exp; 
+	uint32 account_forbid_begin_time; 
+	uint32 account_forbid_inter_time; 
+	uint32 chat_forbid_begin_time; 
+	uint32 chat_forbid_inter_time; 
+	uint32 pet_glodreset_times; 
+	uint64 pet_glodreset_date; 
+	uint32 player_battle_effect; 
+	uint32 invite_player_id; 
+	uint32 hist_player_battle_effect; 
+	uint32 accum_login_days; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_record;
+
+
+typedef struct _t_tb_player_accum_record
+{
+	uint32 player_id; 
+	uint64 total_exp; 
+	uint32 total_skill; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_accum_record;
+
+
+typedef struct _t_tb_player_achieve_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 achieve_id; 
+	uint8 achieve_status; 
+	std::string achieve_info; 
+	uint8 share_flag; 
+	uint8 open_status; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_achieve_record;
+
+
+typedef struct _t_tb_player_actdegree_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 actdegree_id; 
+	std::string actdegree_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_actdegree_record;
+
+
+typedef struct _t_tb_player_action_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 action_id; 
+	uint32 finish_times; 
+	uint64 begin_date; 
+	uint64 end_date; 
+	uint32 total_times; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_action_record;
+
+
+typedef struct _t_tb_player_activity_data_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 activity_id; 
+	std::string data_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_activity_data_record;
+
+
+typedef struct _t_tb_player_activity_gift_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 activity_id; 
+	uint32 gift_id; 
+	uint64 award_date; 
+	uint8 award_type; 
+	std::string data_info; 
+	std::string take_itemid; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_activity_gift_record;
+
+
+typedef struct _t_tb_player_auction_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint64 player_item_id; 
+	uint8 currency_type; 
+	uint32 currency_amount; 
+	std::string seller_nickname; 
+	uint64 expire_auction_time; 
+	uint64 expire_save_time; 
+	std::string item_name; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_auction_record;
+
+
+typedef struct _t_tb_player_battleretieve_record
+{
+	uint64 id; 
+	uint64 player_id; 
+	uint64 battle_id; 
+	uint32 current_lvl; 
+	uint8 status; 
+	uint64 date; 
+	uint64 last_modified_date; 
+} tb_player_battleretieve_record;
+
+
+typedef struct _t_tb_player_bless_record
+{
+	uint32 id; 
+	uint8 type; 
+	uint32 player_id; 
+	uint32 item_id; 
+	uint8 count; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_bless_record;
+
+
+typedef struct _t_tb_player_blessgift_backitem_record
+{
+	uint32 id; 
+	uint32 give_player_id; 
+	uint32 receive_player_id; 
+	uint32 item_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_blessgift_backitem_record;
+
+
+typedef struct _t_tb_player_broadcast_room_record
+{
+	uint32 id; 
+	uint8 room; 
+	uint8 type; 
+	uint32 player_id; 
+	std::string msg; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_broadcast_room_record;
+
+
+typedef struct _t_tb_player_buyitem_record_record
+{
+	uint64 id; 
+	uint8 operstatus; 
+	uint32 player_id; 
+	uint32 user_id; 
+	uint32 total_money; 
+	uint32 current_level; 
+	uint32 charge_cy; 
+	uint32 is_first_charge; 
+	uint32 platform_id; 
+	std::string platform; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_buyitem_record_record;
+
+
+typedef struct _t_tb_player_closefriend_achieve_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 achieve_id; 
+	uint8 achieve_status; 
+	std::string achieve_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_closefriend_achieve_record;
+
+
+typedef struct _t_tb_player_copy_record
+{
+	uint32 id; 
+	uint32 owner_id; 
+	uint8 record_type; 
+	uint32 copy_id; 
+	uint8 copy_level; 
+	uint8 scene; 
+	uint8 stage; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_copy_record;
+
+
+typedef struct _t_tb_player_copy_wave_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 copy_id; 
+	uint8 copy_level; 
+	uint32 instance_id; 
+	uint32 max_wave; 
+	uint32 finish_time; 
+	uint8 player_level; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_copy_wave_record;
+
+
+typedef struct _t_tb_player_email_record
+{
+	uint64 id; 
+	uint32 sender_id; 
+	std::string sender_name; 
+	uint32 receiver_id; 
+	std::string receiver_name; 
+	std::string title; 
+	std::string contents; 
+	uint64 item1; 
+	uint64 item2; 
+	uint64 item3; 
+	uint32 money_gcy; 
+	uint32 money_ccy; 
+	uint32 need_money_gcy; 
+	uint32 need_money_ccy; 
+	uint64 send_date; 
+	uint8 read_type; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_email_record;
+
+
+typedef struct _t_tb_player_flower_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 giveflower_player_id; 
+	uint32 flower_count; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_flower_record;
+
+
+typedef struct _t_tb_player_flower_copy_rank_record
+{
+	uint32 id; 
+	uint32 flower_value; 
+	uint64 player_id; 
+	uint64 other_player_id; 
+	uint8 status; 
+	uint64 create_date; 
+	uint64 last_modified_date; 
+} tb_player_flower_copy_rank_record;
+
+
+typedef struct _t_tb_player_friend_blessgift_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 friend_id; 
+	uint8 friend_level; 
+	uint8 receive_flag; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_friend_blessgift_record;
+
+
+typedef struct _t_tb_player_goods_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 good_id; 
+	uint32 total_buy_count; 
+	uint32 daily_buy_count; 
+	uint32 daily_vaid_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_goods_record;
+
+
+typedef struct _t_tb_player_hunting_record
+{
+	uint64 id; 
+	uint32 player_id; 
+	uint8 type; 
+	uint32 count; 
+	uint64 hunting_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_hunting_record;
+
+
+typedef struct _t_tb_player_invite_friend_reward_record
+{
+	uint32 id; 
+	std::string login_name; 
+	std::string invite_login_name; 
+	std::string ad_code; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_invite_friend_reward_record;
+
+
+typedef struct _t_tb_player_item_equip_record
+{
+	uint64 player_item_id; 
+	uint8 endurance; 
+	uint8 starlevel; 
+	uint8 gooduplev; 
+	uint32 equip_score; 
+	uint32 mainattrbase; 
+	uint32 mainattr_value1; 
+	uint32 mainattr_value2; 
+	uint32 mainattr_value3; 
+	uint8 atk_lucky; 
+	uint32 hole1; 
+	uint32 hole2; 
+	uint32 hole3; 
+	uint32 hole4; 
+	uint8 set_id; 
+	uint32 data1; 
+	uint32 data2; 
+	uint32 data3; 
+	uint32 data4; 
+	uint32 data5; 
+	uint32 lucky; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_item_equip_record;
+
+
+typedef struct _t_tb_player_items_record
+{
+	uint64 id; 
+	uint32 player_id; 
+	uint8 owner_type; 
+	uint32 item_id; 
+	uint32 bag; 
+	uint32 slot; 
+	uint64 mounts; 
+	uint32 count; 
+	std::string info; 
+	uint64 valid_time; 
+	uint8 item_status; 
+	uint32 equip_role_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_items_record;
+
+
+typedef struct _t_tb_player_items_info_record
+{
+	uint32 player_item_id; 
+	uint32 pet_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_items_info_record;
+
+
+typedef struct _t_tb_player_kill_player_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 kill_player_id; 
+	uint32 kill_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_kill_player_record;
+
+
+typedef struct _t_tb_player_map_calctime_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 calctime_type; 
+	uint32 time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_map_calctime_record;
+
+
+typedef struct _t_tb_player_mapcopy_daily_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 mapcopy_id; 
+	uint32 mapcopy_uniqueid; 
+	uint8 enter_times; 
+	uint64 last_enter_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_mapcopy_daily_record;
+
+
+typedef struct _t_tb_player_mounts_record
+{
+	uint32 player_id; 
+	uint8 callout_type; 
+	uint8 look_type; 
+	uint8 color; 
+	uint8 current_level; 
+	uint32 current_exp; 
+	uint32 hp; 
+	uint32 phy_resist; 
+	uint32 magic_resist; 
+	uint32 ignoredef_def; 
+	uint32 critical_def; 
+	uint32 speed; 
+	uint32 physic_attack; 
+	uint32 magic_attack; 
+	uint32 physic_defence; 
+	uint32 magic_defence; 
+	uint32 hit; 
+	uint32 critical; 
+	uint32 dodge; 
+	uint32 damage; 
+	uint32 physic_absorb; 
+	uint32 magic_absorb; 
+	uint32 ignore_def; 
+	uint32 break_power; 
+	uint8 armor; 
+	uint32 armor_exp; 
+	uint8 reins; 
+	uint32 reins_exp; 
+	uint8 saddle; 
+	uint32 saddle_exp; 
+	uint8 horseshoe; 
+	uint32 horseshoe_exp; 
+	uint8 stirrup; 
+	uint32 stirrup_exp; 
+	uint32 fashion; 
+	std::string fashions; 
+	uint8 fashion_show; 
+	uint32 score; 
+	uint32 item_train; 
+	uint8 item_train_small; 
+	uint8 item_train_big; 
+	uint32 gold_train; 
+	uint8 gold_train_small; 
+	uint8 gold_train_big; 
+	uint32 gold_item_train; 
+	uint8 gold_item_train_small; 
+	uint8 gold_item_train_big; 
+	uint32 lucky; 
+	uint8 lucky_small; 
+	uint8 lucky_big; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_mounts_record;
+
+
+typedef struct _t_tb_player_national_vote_record
+{
+	uint32 player_id; 
+	uint8 vote_type; 
+	uint32 vote_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_national_vote_record;
+
+
+typedef struct _t_tb_player_offline_charge_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 charge_money; 
+	uint64 charge_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_offline_charge_record;
+
+
+typedef struct _t_tb_player_other_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 daily_training_time; 
+	uint64 training_date; 
+	uint32 essence; 
+	uint8 invited_type; 
+	uint32 current_useitem; 
+	uint8 autofuxiu_state; 
+	uint32 remain_training_time; 
+	uint32 training_lucky; 
+	uint8 stoptrain_type; 
+	uint32 last_train_essence; 
+	uint32 last_train_lasttime; 
+	uint32 lottery_money; 
+	uint32 pet_blood; 
+	uint32 god_blood; 
+	uint64 award_pet_blood_date; 
+	uint64 award_god_blood_date; 
+	std::string award_blood; 
+	uint32 award_blood_money; 
+	uint32 award_pet_blood_times; 
+	uint32 award_god_blood_times; 
+	uint32 up_blood_times; 
+	uint32 daily_award_pet_blood_times; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_other_record;
+
+
+typedef struct _t_tb_player_pet_record
+{
+	uint32 id; 
+	uint32 monster_id; 
+	uint32 item_id; 
+	uint32 player_id; 
+	std::string name; 
+	uint32 current_title; 
+	uint8 attack_type; 
+	uint8 use_level; 
+	uint8 startlev; 
+	uint32 lin; 
+	uint32 strength_quality; 
+	uint32 vitality_quality; 
+	uint32 intelligence_quality; 
+	uint32 spirit_quality; 
+	uint32 agility_quality; 
+	uint32 strength_quality_max; 
+	uint32 vitality_quality_max; 
+	uint32 intelligence_quality_max; 
+	uint32 spirit_quality_max; 
+	uint32 agility_quality_max; 
+	uint8 current_level; 
+	uint32 current_exp; 
+	uint8 produce_times; 
+	uint32 pet_score; 
+	uint32 max_hp; 
+	uint32 hp; 
+	uint32 strength; 
+	uint32 vitality; 
+	uint32 intelligence; 
+	uint32 spirit; 
+	uint32 agility; 
+	uint32 critical; 
+	uint32 happy; 
+	uint8 talent; 
+	uint32 life_year; 
+	uint8 max_skillnum; 
+	uint8 current_skillnum; 
+	uint8 generation; 
+	uint32 phy_atk; 
+	uint32 magic_atk; 
+	uint32 phy_def; 
+	uint32 magic_def; 
+	uint8 pet_status; 
+	uint8 callout_type; 
+	uint8 atkmode; 
+	uint8 sex; 
+	uint8 quality; 
+	uint8 lucky; 
+	uint64 dead_time; 
+	uint32 talent_skill_exp; 
+	uint32 friendly; 
+	std::string ca_states; 
+	uint32 final_phy_atk; 
+	uint32 final_magic_atk; 
+	uint32 final_phy_def; 
+	uint32 final_magic_def; 
+	uint32 final_critical; 
+	uint32 final_maxhp; 
+	uint32 travel_time; 
+	uint8 quality_type; 
+	std::string talent_skills; 
+	uint32 damage; 
+	uint32 ignoredef; 
+	uint32 phy_risist; 
+	uint32 magic_risist; 
+	uint32 phy_absorb; 
+	uint32 magic_absorb; 
+	uint32 ignoredefdef; 
+	uint32 criticaldef; 
+	uint32 breakpower; 
+	uint32 quality_reset_times; 
+	uint8 blood_look; 
+	uint8 blood_look_lock; 
+	uint8 blood_level; 
+	uint8 blood_exp; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_pet_record;
+
+
+typedef struct _t_tb_player_pet_sns_record
+{
+	uint32 id; 
+	uint32 sns_player_id; 
+	uint32 player_id; 
+	uint32 pet_id; 
+	std::string pet_name; 
+	uint8 sns_type; 
+	std::string name; 
+	std::string reward; 
+	std::string request; 
+	std::string info; 
+	uint8 award_type; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_pet_sns_record;
+
+
+typedef struct _t_tb_player_plants_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 plant_type; 
+	uint8 quality; 
+	uint8 map_id; 
+	uint32 map_x; 
+	uint32 map_y; 
+	uint64 plant_time; 
+	uint8 stolen_times; 
+	uint32 stolen_player1; 
+	uint32 stolen_player2; 
+	uint32 stolen_player3; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_plants_record;
+
+
+typedef struct _t_tb_player_plants_history_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 plant_id; 
+	uint8 his_type; 
+	std::string target; 
+	uint64 his_time; 
+	uint8 quality; 
+	uint32 data1; 
+	uint32 data2; 
+	uint32 data3; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_plants_history_record;
+
+
+typedef struct _t_tb_player_pwdlock_setting_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 use_pwd_lock; 
+	std::string pwd_lock_pwd; 
+	uint32 pwd_lock_questionid; 
+	std::string pwd_lock_answer; 
+	uint32 modify_pwd_lock_wrong_times; 
+	uint32 retrieve_pwd_lock_wrong_times; 
+	uint32 calcel_pwd_lock_wrong_times; 
+	uint32 open_pwd_lock_wrong_times; 
+	uint32 activate_date; 
+	uint32 modify_date; 
+	uint32 retrieve_date; 
+	uint32 cancel_date; 
+	uint32 open_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_pwdlock_setting_record;
+
+
+typedef struct _t_tb_player_randdata_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 type; 
+	uint32 data; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_randdata_record;
+
+
+typedef struct _t_tb_player_relationlist_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 relation_type; 
+	uint32 relation_player_id; 
+	uint32 relation_value; 
+	uint8 pet_play_times; 
+	uint8 be_pet_play_times; 
+	uint64 pet_play_date; 
+	uint64 be_pet_play_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_relationlist_record;
+
+
+typedef struct _t_tb_player_repeat_task_record
+{
+	uint32 id; 
+	uint8 task_type; 
+	uint32 player_id; 
+	uint32 finish_times; 
+	uint32 total_times; 
+	uint64 last_finish_date; 
+	std::string task_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_repeat_task_record;
+
+
+typedef struct _t_tb_player_settings_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	std::string settings; 
+	uint32 cont_login_days; 
+	uint8 can_cont_gain; 
+	uint32 take_cont_gain; 
+	uint8 can_online_awards; 
+	uint8 take_online_awards; 
+	uint32 online_awards_date; 
+	std::string ca_states; 
+	std::string gw_states; 
+	uint32 last_online_date; 
+	uint32 contrevive_daily_times; 
+	uint32 contrevive_daily_date; 
+	uint32 xfx_daily_times; 
+	uint32 xfx_daily_date; 
+	uint64 lvgainitem_flag; 
+	uint32 flag; 
+	uint32 setting_flag; 
+	uint32 gif_flag; 
+	uint8 yellow_greenhand_flag; 
+	uint32 yellow_greenhand_date; 
+	uint8 greenhand_flag; 
+	std::string greenhand_serial; 
+	uint32 weak_gift_day; 
+	uint32 battleframe_daily_time; 
+	uint32 battleframe_weekly_time; 
+	uint8 steal_plant_times; 
+	uint64 steal_plant_date; 
+	uint32 battleframe_date; 
+	uint8 first_charge_buy_type; 
+	uint32 first_charge_buy_item; 
+	uint32 first_charge_buy_item_count; 
+	uint32 last_get_bang_welfare_date; 
+	uint8 bang_skill_level; 
+	uint8 bang_skill_index; 
+	uint8 last_get_prizebox_id; 
+	uint32 last_get_prizebox_time; 
+	uint32 vip_total_ret_days; 
+	uint32 last_get_vip_buffer_time; 
+	uint32 del_friend_date; 
+	uint32 del_friend_count; 
+	uint32 mapcopyx; 
+	uint32 mapcopyy; 
+	uint8 mapcopyparam; 
+	uint8 morrow_gift_bag_flag; 
+	uint32 lastonline_left_secs; 
+	uint32 bang_feed_monster_donate; 
+	uint32 bang_feed_monster_hp; 
+	uint32 dicegame_usedtimes; 
+	uint32 dicegame_buytimes; 
+	uint32 dicegame_extratimes; 
+	uint8 dicegame_state; 
+	uint8 dicegame_posstate; 
+	uint32 dicegame_pos; 
+	uint32 dicegame_maxpos; 
+	uint32 dicegame_taskid; 
+	uint32 dicegame_begindate; 
+	uint8 dicegame_dire; 
+	uint8 dicegame_stay; 
+	std::string taskfinishedinfo; 
+	std::string qualityinfo; 
+	std::string retieveinfo; 
+	std::string histnationalinfo; 
+	std::string histlevelinfo; 
+	uint32 retieve_times; 
+	uint32 retieve_date; 
+	uint32 huishi_date1; 
+	uint32 huishi_date2; 
+	uint32 huishi_date3; 
+	uint64 blue_dailygift_date; 
+	uint32 take_blue_gift; 
+	uint8 can_blue_gift; 
+	uint8 blue_greenhand_flag; 
+	uint64 treasure_dailygift_date; 
+	uint32 blue_cont_login_days; 
+	uint32 last_blue_online_date; 
+	uint8 is_get_yellowpet_flag; 
+	uint8 is_not_remind_yellowpet_flag; 
+	uint32 invite_reward_id; 
+	uint32 max_battle_combol_kill; 
+	uint32 battle_kill_player; 
+	uint32 battle_num; 
+	uint32 battle_kill_monster; 
+	uint32 battle_kill_tower; 
+	uint32 battle_score; 
+	uint32 total_battle_score; 
+	uint8 is_get_bluepet_flag; 
+	uint8 is_not_remind_bluepet_flag; 
+	uint8 is_get_qqvippet_flag; 
+	uint8 is_not_remind_qqvippet_flag; 
+	uint32 total_online_times; 
+	std::string last_chat_time; 
+	uint8 pet_travel_times; 
+	uint8 pet_play_times; 
+	uint8 be_pet_play_reward_times; 
+	uint8 be_pet_play_times; 
+	uint64 pet_play_date; 
+	uint64 be_pet_play_date; 
+	uint64 pet_travel_date; 
+	uint8 qqvip_growup_gift; 
+	uint8 yellow_growup_gift; 
+	uint8 blue_growup_gift; 
+	uint64 qqvip_dailygift_date; 
+	uint32 take_qqvip_gift; 
+	uint8 can_qqvip_gift; 
+	uint8 qqvip_greenhand_flag; 
+	uint32 qqvip_cont_login_days; 
+	uint32 last_qqvip_online_date; 
+	uint64 free_bless_date; 
+	uint32 get3366daily_gift_date; 
+	uint32 get_iwan_daily_gift_date; 
+	uint32 last_cf_lottery_date; 
+	uint32 collect_game_reward; 
+	uint8 got_equipset_all; 
+	std::string multi_equipset; 
+	std::string award_soul; 
+	uint8 award_soul_times; 
+	uint8 award_soul_chg_times; 
+	uint64 award_soul_date; 
+	std::string reset_soul; 
+	uint8 can_award_soul_times; 
+	uint32 copy_finish_record; 
+	uint32 invalid_speed_time; 
+	uint32 take_qzone_gift; 
+	uint8 can_qzone_gift; 
+	uint32 qzone_cont_login_days; 
+	uint32 last_qzone_online_date; 
+	uint8 qqred_greenhand_gift; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+	uint32 actdegree_point; 
+	uint32 actdegree_reward; 
+	uint8 weibo_gift_flag; 
+	uint32 last_change_pkmode_time; 
+	uint8 firstloginflag; 
+	uint8 xinyue_gift; 
+	uint8 market_ad_award_flag; 
+} tb_player_settings_record;
+
+
+typedef struct _t_tb_player_skills_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 skill_id; 
+	uint8 skill_level; 
+	uint64 last_use_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_skills_record;
+
+
+typedef struct _t_tb_player_soulcard_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 card_type; 
+	uint32 last_enable_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_soulcard_record;
+
+
+typedef struct _t_tb_player_soulequip_record
+{
+	uint64 id; 
+	uint64 player_id; 
+	uint64 soulequip_skillid; 
+	uint32 soulequip_color; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_soulequip_record;
+
+
+typedef struct _t_tb_player_target_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 target_id; 
+	uint8 target_status; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_target_record;
+
+
+typedef struct _t_tb_player_tasklist_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 task_type; 
+	uint8 condition_type; 
+	uint32 task_id; 
+	uint32 dice_num; 
+	uint32 accept_npc; 
+	uint32 comp_npc; 
+	uint32 task_msg; 
+	uint32 process_msg; 
+	uint32 accept_msg; 
+	uint32 comp_msg; 
+	uint64 refresh_date; 
+	uint64 end_date; 
+	uint64 accept_time; 
+	std::string task_condition; 
+	std::string task_reward; 
+	uint8 task_status; 
+	uint8 task_quality; 
+	uint8 check_status; 
+	uint64 created_date; 
+	uint8 status; 
+	uint64 last_modified_date; 
+} tb_player_tasklist_record;
+
+
+typedef struct _t_tb_player_titlelist_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 title_type; 
+	uint32 title; 
+	uint8 national; 
+	uint64 last_modified_date; 
+	uint64 created_date; 
+	uint8 status; 
+} tb_player_titlelist_record;
+
+
+typedef struct _t_tb_player_training_item_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 item_id; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_training_item_record;
+
+
+typedef struct _t_tb_player_treasure_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 treasure_type; 
+	uint32 goods_id; 
+	uint32 count; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_treasure_record;
+
+
+typedef struct _t_tb_player_txachieve_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 txachieve_id; 
+	uint8 txachieve_status; 
+	std::string txachieve_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_txachieve_record;
+
+
+typedef struct _t_tb_player_volumes_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 volume_type; 
+	uint32 volume_level; 
+	uint8 volume_thinking_level; 
+	uint32 volume_thinking_value; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_volumes_record;
+
+
+typedef struct _t_tb_player_vote_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 candidate_id; 
+	uint8 vote_type; 
+	uint32 vote_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_vote_record;
+
+
+typedef struct _t_tb_player_wed_record
+{
+	uint32 id; 
+	uint32 wed_instid; 
+	uint8 wed_type; 
+	uint32 wed_time; 
+	uint32 player_id; 
+	uint32 other_player_id; 
+	uint8 wed_status; 
+	uint32 apply_breakup_playerid; 
+	uint32 apply_breakup_time; 
+	uint8 through_street_type; 
+	uint8 street_status; 
+	uint32 wedding_copy_time; 
+	uint8 anniversary_email_flag; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_wed_record;
+
+
+typedef struct _t_tb_player_wedblessgift_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint32 give_playe_id; 
+	uint32 give_itemid; 
+	uint8 is_back; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_wedblessgift_record;
+
+
+typedef struct _t_tb_player_wing_record
+{
+	uint32 id; 
+	uint32 player_id; 
+	uint8 starlevel; 
+	uint32 current_look; 
+	std::string looks; 
+	uint8 feather_bag_size; 
+	uint8 award_train_exp_times; 
+	uint64 award_train_exp_date; 
+	uint32 light_obj; 
+	uint32 exchange_num; 
+	uint8 findnpc_times; 
+	uint64 findnpc_date; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_wing_record;
+
+
+typedef struct _t_tb_player_wing_feather_record
+{
+	uint32 hist_id; 
+	uint32 id; 
+	uint32 player_id; 
+	uint32 feather_id; 
+	uint8 position; 
+	uint8 slot; 
+	uint8 current_level; 
+	uint32 current_exp; 
+	uint8 attrstatus; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_player_wing_feather_record;
+
+
+typedef struct _t_tb_system_bless_item_record
+{
+	uint32 id; 
+	uint32 item_id; 
+	uint32 free_weight; 
+	uint32 free_times; 
+	uint32 one_weight; 
+	uint32 one_times; 
+	uint32 ten_weight; 
+	uint32 ten_times; 
+	uint32 fifty_weight; 
+	uint32 fifty_times; 
+	uint8 broadcast_flag; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_bless_item_record;
+
+
+typedef struct _t_tb_system_bless_lottery_record
+{
+	uint32 id; 
+	uint32 bless_times; 
+	uint32 ten_prob; 
+	uint32 fifty_prob_before; 
+	uint32 fifty_prob_after; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_bless_lottery_record;
+
+
+typedef struct _t_tb_system_bless_lottery_prob_record
+{
+	uint32 id; 
+	uint32 lottery_times; 
+	uint32 normal; 
+	uint32 one_in_eight; 
+	uint32 one_in_four; 
+	uint32 one_in_two; 
+	uint32 all; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_bless_lottery_prob_record;
+
+
+typedef struct _t_tb_system_forbid_ip_record
+{
+	uint32 id; 
+	std::string ip; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_forbid_ip_record;
+
+
+typedef struct _t_tb_system_forbid_user_record
+{
+	uint32 id; 
+	std::string loginname; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_forbid_user_record;
+
+
+typedef struct _t_tb_system_gmpermit_record
+{
+	uint32 id; 
+	uint8 gm_type; 
+	uint32 function_id; 
+	uint8 flag; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_gmpermit_record;
+
+
+typedef struct _t_tb_system_marquee_record
+{
+	uint32 id; 
+	uint64 begin_time; 
+	uint64 end_time; 
+	uint32 chat_function; 
+	std::string content; 
+	std::string info; 
+	uint32 broadcast_interval; 
+	uint32 platform_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_marquee_record;
+
+
+typedef struct _t_tb_system_notice_record
+{
+	uint32 id; 
+	uint8 module; 
+	uint32 chat_function; 
+	uint8 national; 
+	std::string content; 
+	std::string info; 
+	uint32 broadcast_interval; 
+	uint64 begin_time; 
+	uint64 end_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_notice_record;
+
+
+typedef struct _t_tb_system_package_record
+{
+	uint32 id; 
+	uint32 package_type; 
+	std::string package_num; 
+	uint32 obtain_player_id; 
+	uint32 obtain_date; 
+	uint8 is_use; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_package_record;
+
+
+typedef struct _t_tb_system_parameter_record
+{
+	uint32 id; 
+	uint32 param_type; 
+	uint32 param_name; 
+	std::string param_value; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_parameter_record;
+
+
+typedef struct _t_tb_system_vars_record
+{
+	uint32 var_id; 
+	std::string var_value; 
+	uint64 var_data; 
+	std::string memo; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_vars_record;
+
+
+typedef struct _t_tb_system_world_boss_record
+{
+	uint32 id; 
+	uint32 boss_id; 
+	uint8 quality; 
+	uint32 mapmonster_id; 
+	uint8 world_level; 
+	uint8 born_type; 
+	uint8 national; 
+	uint8 mapid; 
+	uint32 mapx; 
+	uint32 mapy; 
+	uint64 born_time; 
+	uint32 born_inteval; 
+	std::string killer; 
+	std::string born_pos; 
+	std::string weak_boss; 
+	uint8 weak_boss_nation; 
+	std::string weak_boss_pos; 
+	std::string icon_info; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_system_world_boss_record;
+
+
+typedef struct _t_tb_table_achieve_record
+{
+	uint32 id; 
+	std::string name; 
+	std::string conditions; 
+	uint32 score; 
+	uint32 reward_title; 
+	std::string share_reward; 
+	uint8 level; 
+	std::string reward; 
+	uint32 pre_achieveid; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_achieve_record;
+
+
+typedef struct _t_tb_table_actdegree_record
+{
+	uint32 id; 
+	std::string name; 
+	uint32 fastfinish; 
+	std::string preconditions; 
+	std::string finishconditions; 
+	uint8 times; 
+	uint32 actdegree_point; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_actdegree_record;
+
+
+typedef struct _t_tb_table_attrlib_record
+{
+	uint32 id; 
+	std::string name; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_attrlib_record;
+
+
+typedef struct _t_tb_table_attrlib_list_record
+{
+	uint32 id; 
+	uint32 attrlib_id; 
+	uint8 attr_type; 
+	uint32 attr_value; 
+	uint8 drop_rate; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_attrlib_list_record;
+
+
+typedef struct _t_tb_table_battle_group_record
+{
+	uint32 id; 
+	std::string group_name; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_battle_group_record;
+
+
+typedef struct _t_tb_table_buffer_record
+{
+	uint32 id; 
+	std::string name; 
+	std::string buffer_effect; 
+	uint8 buff_type; 
+	uint8 spec_effect; 
+	uint32 effect_id; 
+	uint8 display_bit; 
+	std::string description; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_buffer_record;
+
+
+typedef struct _t_tb_table_chatchannle_record
+{
+	uint8 id; 
+	uint8 level_restrict; 
+	uint8 interval_restrict; 
+	uint32 item_restrict; 
+	uint32 fee; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_chatchannle_record;
+
+
+typedef struct _t_tb_table_city_record
+{
+	uint8 id; 
+	std::string name; 
+	uint8 national; 
+	uint32 title_id; 
+	uint32 leader_title_id; 
+	uint8 mapid; 
+	uint8 backroom_mapid; 
+	uint32 taxation; 
+	uint8 buff_mapid; 
+	uint32 buff_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_city_record;
+
+
+typedef struct _t_tb_table_closefriend_achieve_record
+{
+	uint32 id; 
+	std::string name; 
+	std::string conditions; 
+	std::string reward; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_closefriend_achieve_record;
+
+
+typedef struct _t_tb_table_colddown_record
+{
+	uint32 id; 
+	uint32 cd_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_colddown_record;
+
+
+typedef struct _t_tb_table_equipment_record
+{
+	uint32 item_id; 
+	uint8 enduration; 
+	uint32 mainattr_base; 
+	uint32 mainattr_value1; 
+	uint32 up_item; 
+	uint32 up_needgcy; 
+	uint32 up_needitem; 
+	uint8 up_needitem_num; 
+	uint32 reset_needgcy; 
+	uint32 reset_needitem; 
+	uint8 reset_needitem_num; 
+	std::string attr_addi_lib; 
+	std::string attr_addi_lib2; 
+	std::string attr_addi_lib3; 
+	uint32 ratio; 
+	uint32 special_up_item; 
+	uint32 special_up_needitem; 
+	uint8 special_up_needitem_num; 
+	uint32 wakeup_item; 
+	uint32 wakeup_need_item1; 
+	uint8 wakeup_need_item1_count; 
+	uint32 wakeup_need_item2; 
+	uint8 wakeup_need_item2_count; 
+	uint32 wakeup_need_money; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_equipment_record;
+
+
+typedef struct _t_tb_table_equipset_record
+{
+	uint8 id; 
+	std::string name; 
+	uint32 set_effect_type; 
+	std::string set_effect_value1; 
+	std::string set_effect_value2; 
+	std::string set_effect_value3; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_equipset_record;
+
+
+typedef struct _t_tb_table_find_feather_record
+{
+	uint32 id; 
+	uint32 feather_id; 
+	uint32 prob; 
+	uint8 find_type; 
+	uint8 starlevel; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_find_feather_record;
+
+
+typedef struct _t_tb_table_goods_record
+{
+	uint32 id; 
+	std::string name; 
+	std::string item_libs; 
+	uint8 treasure_type; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_goods_record;
+
+
+typedef struct _t_tb_table_hunting_record
+{
+	uint32 id; 
+	uint8 type; 
+	uint32 count; 
+	std::string item_lib; 
+	uint32 need_ccy; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_hunting_record;
+
+
+typedef struct _t_tb_table_item_record
+{
+	uint32 id; 
+	std::string item_name; 
+	std::string iteminfo; 
+	uint8 item_quality; 
+	uint8 item_class_1; 
+	uint8 item_class_2; 
+	uint32 item_value; 
+	uint32 item_sell_gcy; 
+	uint32 item_sell_gcyb; 
+	uint32 item_sell_ccy; 
+	uint32 item_sell_ccyb; 
+	uint32 item_buy_gcy; 
+	uint32 item_buy_gcyb; 
+	uint32 item_buy_ccy; 
+	uint32 item_buy_ccyb; 
+	uint32 item_charge_ccy; 
+	uint8 use_level; 
+	uint8 max_use_level; 
+	uint32 group_size; 
+	uint8 bind_type; 
+	std::string effect_value; 
+	uint32 task_id; 
+	uint32 common_cd; 
+	uint32 self_cd; 
+	uint32 valid_time; 
+	uint8 validtime_begintype; 
+	uint8 profession_id; 
+	uint8 use_mapset_id; 
+	uint8 sex_limit; 
+	uint8 dropable; 
+	uint8 use_status; 
+	uint32 discharge_item; 
+	uint8 discharge_item_num; 
+	uint8 good_item; 
+	uint32 feed_score; 
+	uint8 charge_item; 
+	uint8 pwd_lock; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_item_record;
+
+
+typedef struct _t_tb_table_item_lib_record
+{
+	uint32 id; 
+	std::string lib_name; 
+	uint8 drop_rule; 
+	uint32 alive_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_item_lib_record;
+
+
+typedef struct _t_tb_table_item_lib_list_record
+{
+	uint32 id; 
+	uint32 lib_id; 
+	uint32 item_id; 
+	uint8 item_count; 
+	uint8 drop_rate_type; 
+	uint32 drop_rate; 
+	uint32 set_id; 
+	uint32 starlev; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_item_lib_list_record;
+
+
+typedef struct _t_tb_table_language_record
+{
+	uint32 id; 
+	uint32 lang_type; 
+	uint32 lang_id; 
+	std::string lang_string; 
+	std::string memo; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_language_record;
+
+
+typedef struct _t_tb_table_lvexp_record
+{
+	uint32 id; 
+	uint8 level; 
+	uint32 next_lv_exp; 
+	uint32 max_accum_exp; 
+	uint32 next_lv_pet_exp; 
+	uint32 next_lv_soulequip_exp; 
+	uint32 soulequip_skill; 
+	uint32 next_lv_mounts_exp; 
+	uint32 next_lv_mountsequip_exp; 
+	uint32 next_lv_mountsequip_item; 
+	uint32 lv_mounts_lucky_max; 
+	uint32 next_lv_soul_exp; 
+	uint32 lv_soul_value; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_lvexp_record;
+
+
+typedef struct _t_tb_table_lvgainitem_record
+{
+	uint32 id; 
+	uint8 level; 
+	std::string gain_item; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_lvgainitem_record;
+
+
+typedef struct _t_tb_table_map_record
+{
+	uint8 id; 
+	std::string name; 
+	uint8 level_restrict; 
+	uint8 national; 
+	uint8 pkmode; 
+	std::string revive_point; 
+	std::string revive_param; 
+	std::string foreign_revive_param; 
+	uint8 foreign_revive; 
+	uint8 is_copy; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+	uint8 map_type; 
+	uint8 calctime_type; 
+} tb_table_map_record;
+
+
+typedef struct _t_tb_table_mapcopy_record
+{
+	uint32 id; 
+	std::string copy_name; 
+	uint8 restrict_type; 
+	uint8 restrict_times; 
+	uint8 extra_times; 
+	uint32 extra_item_id; 
+	std::string open_time; 
+	std::string complete_conditions; 
+	uint32 time_restrict; 
+	uint8 copy_type; 
+	std::string enter_npc_point; 
+	std::string info; 
+	uint8 record_type; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_mapcopy_record;
+
+
+typedef struct _t_tb_table_mapcopy_level_record
+{
+	uint32 mapcopy_id; 
+	uint8 mapcopy_level; 
+	uint8 restrict_level; 
+	std::string item_libs; 
+	uint32 exp; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_mapcopy_level_record;
+
+
+typedef struct _t_tb_table_mapcopy_list_record
+{
+	uint32 mapcopy_id; 
+	uint32 map_index; 
+	uint32 map_id; 
+	uint32 scene_ccy; 
+	std::string enter_point; 
+	std::string transport_point; 
+	std::string transport_condition; 
+	uint32 recommend_fight; 
+	std::string attr_award; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_mapcopy_list_record;
+
+
+typedef struct _t_tb_table_mapmonster_record
+{
+	uint32 id; 
+	uint32 monster_id; 
+	uint32 map_id; 
+	uint32 born_x; 
+	uint32 born_y; 
+	uint8 pick_type; 
+	uint8 direction; 
+	uint8 national; 
+	uint8 born_radius; 
+	uint32 reborn_time; 
+	uint32 behavior; 
+	uint8 beattack; 
+	std::string skills; 
+	uint32 buffid; 
+	uint8 view_range; 
+	uint8 attack_range; 
+	uint32 attack_rate; 
+	uint32 follow_range; 
+	uint32 randwalk_range; 
+	uint32 maximum; 
+	uint32 flag; 
+	std::string item_libs; 
+	uint8 drop_type; 
+	uint8 drop_owner_type; 
+	uint8 drop_dec; 
+	std::string drop_money; 
+	uint8 copy_record_type; 
+	std::string auction_item_libs; 
+	std::string copy_finish_item_libs; 
+	uint8 born_type; 
+	uint8 boss_type; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_mapmonster_record;
+
+
+typedef struct _t_tb_table_monsterinfo_record
+{
+	uint32 id; 
+	uint32 resource_id; 
+	std::string name; 
+	uint32 strength; 
+	uint32 vitality; 
+	uint32 intelligence; 
+	uint32 spirit; 
+	uint32 agility; 
+	uint32 speed; 
+	uint32 hp; 
+	uint32 mp; 
+	uint32 critical; 
+	uint32 dodge; 
+	uint32 hit; 
+	uint32 attack; 
+	uint8 attack_type; 
+	uint32 defence; 
+	uint32 magic_defence; 
+	uint32 skillid; 
+	uint8 level; 
+	uint32 exp; 
+	uint32 action_interval; 
+	std::string behavior; 
+	std::string param; 
+	uint8 looksize; 
+	uint32 critical_def; 
+	uint32 damage; 
+	uint32 ignore_def; 
+	uint32 phy_absorb; 
+	uint32 magic_absorb; 
+	uint32 phy_resist; 
+	uint32 magic_resist; 
+	uint32 ignore_def_def; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_monsterinfo_record;
+
+
+typedef struct _t_tb_table_monsterspeak_record
+{
+	uint32 mapmonsterid; 
+	std::string born_speak; 
+	std::string die_speak; 
+	std::string battle_speak; 
+	uint8 hp_precent; 
+	std::string behurt_speak; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 lastmodified_date; 
+} tb_table_monsterspeak_record;
+
+
+typedef struct _t_tb_table_mounts_attr_record
+{
+	uint32 id; 
+	uint8 type; 
+	uint8 level; 
+	uint32 hp; 
+	uint32 phy_resist; 
+	uint32 magic_resist; 
+	uint32 ignoredef; 
+	uint32 critical_def; 
+	uint32 speed; 
+	uint32 physic_attack; 
+	uint32 magic_attack; 
+	uint32 physic_defence; 
+	uint32 magic_defence; 
+	uint32 hit; 
+	uint32 critical; 
+	uint32 dodge; 
+	uint32 damage; 
+	uint32 physic_absorb; 
+	uint32 magic_absorb; 
+	uint32 ignore_def; 
+	uint32 break_power; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_mounts_attr_record;
+
+
+typedef struct _t_tb_table_mounts_fashion_record
+{
+	uint32 id; 
+	uint32 attr1; 
+	uint32 attr2; 
+	uint32 attr3; 
+	uint32 validity_time; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_mounts_fashion_record;
+
+
+typedef struct _t_tb_table_national_position_record
+{
+	uint8 id; 
+	std::string name; 
+	uint32 enrol_price; 
+	uint8 limit_count; 
+	std::string reward; 
+	std::string enrol_reward; 
+	uint8 weight; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_national_position_record;
+
+
+typedef struct _t_tb_table_national_position_right_record
+{
+	uint8 position_id; 
+	uint32 right_id; 
+	std::string description; 
+	uint64 last_modified_date; 
+	uint64 created_date; 
+	uint8 status; 
+} tb_table_national_position_right_record;
+
+
+typedef struct _t_tb_table_national_right_record
+{
+	uint32 id; 
+	std::string description; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_national_right_record;
+
+
+typedef struct _t_tb_table_path_record
+{
+	uint32 id; 
+	uint8 path_id; 
+	uint8 national; 
+	uint8 type; 
+	uint8 map_id; 
+	uint32 map_x; 
+	uint32 map_y; 
+	std::string action; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_path_record;
+
+
+typedef struct _t_tb_table_pet_sns_record
+{
+	uint32 sns_id; 
+	uint32 id; 
+	std::string sns_name; 
+	uint8 drop_type; 
+	uint32 drop_rate; 
+	uint8 sns_type; 
+	std::string reward; 
+	std::string together_reward; 
+	std::string request; 
+	uint32 lang_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_pet_sns_record;
+
+
+typedef struct _t_tb_table_petinfo_record
+{
+	uint8 id; 
+	std::string name; 
+	uint8 attack_type; 
+	uint8 use_level; 
+	uint32 strength_quality; 
+	uint32 vitality_quality; 
+	uint32 intelligence_quality; 
+	uint32 spirit_quality; 
+	uint32 agility_quality; 
+	uint32 critical; 
+	uint32 dodge; 
+	uint32 hit; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_petinfo_record;
+
+
+typedef struct _t_tb_table_pkmode_record
+{
+	uint8 id; 
+	uint8 interval_restrict; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_pkmode_record;
+
+
+typedef struct _t_tb_table_proflv_record
+{
+	uint8 profession_id; 
+	uint8 level; 
+	uint32 hp; 
+	uint32 mp; 
+	uint32 strength; 
+	uint32 vitality; 
+	uint32 intelligence; 
+	uint32 spirit; 
+	uint32 agility; 
+	uint32 critical; 
+	uint32 hit; 
+	uint32 dodge; 
+	uint32 magic_defence; 
+	uint32 physic_defence; 
+	uint32 magic_attack; 
+	uint32 physic_attack; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_proflv_record;
+
+
+typedef struct _t_tb_table_profskills_record
+{
+	uint32 id; 
+	uint8 profession_id; 
+	uint8 skill_level; 
+	uint8 skill_type; 
+	uint8 skill_attr; 
+	uint8 target_type; 
+	uint8 distance; 
+	uint8 effect_range; 
+	uint8 max_effects; 
+	uint32 use_mp; 
+	uint32 common_cd; 
+	uint8 combol_type; 
+	uint32 combol_skill; 
+	uint32 combol_skill2; 
+	uint32 combol_cd; 
+	uint8 special_type; 
+	uint8 special_skill_type; 
+	uint8 special_target_type; 
+	uint8 special_target_nums; 
+	std::string special_effect; 
+	uint32 self_cd; 
+	uint32 threat_value; 
+	uint8 study_level; 
+	std::string effect_value; 
+	uint8 basic_skill; 
+	uint8 study_skillprof; 
+	uint8 study_skillpoint; 
+	uint32 study_item; 
+	uint32 study_money; 
+	uint32 study_exp; 
+	uint32 study_essence; 
+	uint8 atk_times; 
+	uint8 limit_target; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_profskills_record;
+
+
+typedef struct _t_tb_table_question_record
+{
+	uint32 id; 
+	std::string content; 
+	std::string option_a; 
+	std::string option_d; 
+	std::string option_c; 
+	std::string option_b; 
+	uint8 answer; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_question_record;
+
+
+typedef struct _t_tb_table_rankaward_record
+{
+	uint32 id; 
+	uint8 rank_type; 
+	uint8 ranking; 
+	uint32 award_item1; 
+	uint32 award_item2; 
+	uint32 award_item3; 
+	uint32 money_ccy; 
+	uint32 money_ccy_b; 
+	uint32 money_gcy; 
+	uint32 money_gcy_b; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 lastmodified_date; 
+} tb_table_rankaward_record;
+
+
+typedef struct _t_tb_table_server_record
+{
+	uint32 id; 
+	std::string server_name; 
+	uint32 group_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_server_record;
+
+
+typedef struct _t_tb_table_shop_record
+{
+	uint32 id; 
+	std::string name; 
+	uint32 mapid; 
+	uint32 mapx; 
+	uint32 mapy; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_shop_record;
+
+
+typedef struct _t_tb_table_shopgoods_record
+{
+	uint32 id; 
+	uint32 shop_id; 
+	uint32 goods_id; 
+	uint32 item_id; 
+	uint8 user_level; 
+	uint8 sell_currency_type; 
+	uint32 sell_price; 
+	std::string limit_condition; 
+	uint32 total_sell_daily; 
+	uint32 user_buy_daily; 
+	uint32 user_buy_total; 
+	uint32 goods_index; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_shopgoods_record;
+
+
+typedef struct _t_tb_table_talk_record
+{
+	uint32 id; 
+	uint8 type; 
+	std::string content; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_talk_record;
+
+
+typedef struct _t_tb_table_talk_lib_record
+{
+	uint32 id; 
+	std::string lib_name; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_talk_lib_record;
+
+
+typedef struct _t_tb_table_talk_lib_list_record
+{
+	uint32 id; 
+	uint32 lib_id; 
+	uint32 talk_id; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_talk_lib_list_record;
+
+
+typedef struct _t_tb_table_target_record
+{
+	uint32 id; 
+	uint8 min_level; 
+	uint8 max_level; 
+	std::string conditions; 
+	std::string reward; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_target_record;
+
+
+typedef struct _t_tb_table_task_record
+{
+	uint32 id; 
+	uint32 task_id; 
+	uint8 task_type; 
+	std::string name; 
+	uint8 national; 
+	uint8 level; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_task_record;
+
+
+typedef struct _t_tb_table_title_record
+{
+	uint32 id; 
+	uint8 title_type; 
+	std::string title_name; 
+	uint32 title_belong; 
+	std::string title_effect; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_title_record;
+
+
+typedef struct _t_tb_table_transport_record
+{
+	uint32 id; 
+	uint8 map_id; 
+	uint32 map_x; 
+	uint32 map_y; 
+	uint8 dest_map_id; 
+	uint32 dest_map_x; 
+	uint32 dest_map_y; 
+	uint8 dest_width; 
+	uint8 dest_height; 
+	uint8 direction; 
+	uint8 level_restrict; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_transport_record;
+
+
+typedef struct _t_tb_table_txachieve_record
+{
+	uint32 id; 
+	std::string name; 
+	std::string conditions; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_txachieve_record;
+
+
+typedef struct _t_tb_table_volumes_record
+{
+	uint32 volume_type; 
+	uint32 volume_level; 
+	uint32 level_limit; 
+	uint32 attr_type; 
+	uint32 attr_value; 
+	uint32 cooldown; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_volumes_record;
+
+
+typedef struct _t_tb_table_volumes_thinking_record
+{
+	uint32 id; 
+	uint8 volume_type; 
+	uint8 volume_thinking_level; 
+	uint32 volume_thinking_value; 
+	std::string attr_effect; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_volumes_thinking_record;
+
+
+typedef struct _t_tb_table_wing_feather_record
+{
+	uint32 id; 
+	uint32 addattr1; 
+	uint32 addattr2; 
+	uint8 quality; 
+	uint8 sell_type; 
+	uint32 feed_exp; 
+	uint32 sell_training_exp; 
+	std::string levexp; 
+	uint8 attrstatus; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_wing_feather_record;
+
+
+typedef struct _t_tb_table_wing_look_record
+{
+	uint32 id; 
+	uint32 addattr1; 
+	uint32 addattr2; 
+	uint8 open_starlev; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_table_wing_look_record;
+
+
+typedef struct _t_tb_user_record
+{
+	uint32 id; 
+	std::string loginname; 
+	uint8 is_online; 
+	uint32 online_player; 
+	uint32 charge_cy; 
+	uint32 created_players; 
+	uint32 today_delete_players; 
+	uint64 delete_player_date; 
+	std::string last_login_ip; 
+	uint8 audit_flag; 
+	std::string realname; 
+	std::string sfzhm; 
+	std::string session; 
+	std::string openkey; 
+	std::string pfkey; 
+	uint64 session_expire_date; 
+	uint8 yellow_info; 
+	uint8 platform_id; 
+	uint64 login_time; 
+	uint64 logout_time; 
+	uint32 daily_online_secs; 
+	uint64 daily_charge; 
+	uint64 daily_ret_charge; 
+	uint32 last_ret_charge_date; 
+	uint64 total_charge; 
+	uint8 force_login; 
+	uint8 blue_info; 
+	uint8 vip_customer_level; 
+	uint8 game_access; 
+	std::string enrol_ip; 
+	std::string ad_code; 
+	uint8 qqvip_info; 
+	std::string platform; 
+	uint8 level3366; 
+	uint8 xinyue_level; 
+	uint32 session_invite_player_id; 
+	uint8 qqzone_dailygift_flag; 
+	uint8 qqred_info; 
+	uint8 market_ad_flag; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_user_record;
+
+
+typedef struct _t_tb_user_access_log_record
+{
+	uint32 id; 
+	uint32 user_id; 
+	std::string login_ip; 
+	uint32 login_time; 
+	uint32 logout_time; 
+	uint8 platform_id; 
+	std::string platform; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_user_access_log_record;
+
+
+typedef struct _t_tb_user_settings_record
+{
+	uint32 id; 
+	uint32 user_id; 
+	std::string settings; 
+	uint8 charge_flag; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_user_settings_record;
+
+
+typedef struct _t_tb_welcome_email_record
+{
+	uint32 id; 
+	std::string title; 
+	std::string content; 
+	uint8 level; 
+	uint8 status; 
+	uint64 created_date; 
+	uint64 last_modified_date; 
+} tb_welcome_email_record;
+
+

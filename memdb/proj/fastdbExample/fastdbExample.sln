@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example1", "example1\example1.vcproj", "{A048113A-04DE-407D-BA00-E00B38ED7B05}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example2", "example2\example2.vcproj", "{C6DFD4F2-0844-49EE-8514-1EDF1119BA6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A048113A-04DE-407D-BA00-E00B38ED7B05}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A048113A-04DE-407D-BA00-E00B38ED7B05}.Debug|Win32.Build.0 = Debug|Win32
+		{A048113A-04DE-407D-BA00-E00B38ED7B05}.Release|Win32.ActiveCfg = Release|Win32
+		{A048113A-04DE-407D-BA00-E00B38ED7B05}.Release|Win32.Build.0 = Release|Win32
+		{C6DFD4F2-0844-49EE-8514-1EDF1119BA6B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C6DFD4F2-0844-49EE-8514-1EDF1119BA6B}.Debug|Win32.Build.0 = Debug|Win32
+		{C6DFD4F2-0844-49EE-8514-1EDF1119BA6B}.Release|Win32.ActiveCfg = Release|Win32
+		{C6DFD4F2-0844-49EE-8514-1EDF1119BA6B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

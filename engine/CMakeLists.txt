@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(engine)
+
+macro(source_group_by_dir source_files)
+    if(MSVC)
+        set(sgbd_cur_dir ${CMAKE_CURRENT_SOURCE_DIR})
+		MESSAGE(STATUS "${CMAKE_CURRENT_SOURCE_DIR}")
+        foreach(sgbd_file ${${source_files}})
+			MESSAGE(STATUS "AAAA")
+            string(REGEX REPLACE ${sgbd_cur_dir}/\(.*\) \\1 sgbd_fpath ${sgbd_file})
+			FOREACH(cpp ${sgbd_fpath} ) 
+				MESSAGE(STATUS "${cpp}")
+			ENDFOREACH()
+			MESSAGE(STATUS "AAAA")
+            string(REGEX REPLACE "\(.*\)/.*" \\1 sgbd_group_name ${sgbd_fpath})
+			FOREACH(cpp ${sgbd_group_name} ) 
+				MESSAGE(STATUS "${cpp}")
+			ENDFOREACH()
+			MESSAGE(STATUS "AAAA")
+            string(COMPARE EQUAL ${sgbd_fpath} ${sgbd_group_name} sgbd_nogroup)
+			MESSAGE(STATUS "${sgbd_nogroup}")
+			MESSAGE(STATUS "AAAA")
+            string(REPLACE "/" "\\" sgbd_group_name ${sgbd_group_name})
+            if(sgbd_nogroup)
+                set(sgbd_group_name "\\")
+            endif(sgbd_nogroup)
+			MESSAGE(STATUS "${sgbd_group_name}  ${sgbd_file}")
+			MESSAGE(STATUS "BBBB")
+            source_group( "${sgbd_group_name}" FILES ${sgbd_file})
+        endforeach(sgbd_file)
+    endif(MSVC)
+endmacro(source_group_by_dir)
+
+#在最外层的CmakeList中添加包含路径include_directories,则其子工程中都会被添加进该包含路径
+
+add_subdirectory(common)
+add_subdirectory(thread_test)
+
+IF(MSVC)	 
+	SET(COMP_FLAGS "-W3")
+ELSE()
+	SET(COMP_FLAGS "-ggdb -Wall -g")
+ENDIF()
+
+SET(MY "AAAA")
+

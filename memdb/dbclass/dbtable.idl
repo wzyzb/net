@@ -1,0 +1,154 @@
+typedef struct _t_account_record
+{
+	uint64 ID; 
+	uint64 AccountID; 
+	std::string UserName; 
+	uint64 LastLoginId; 
+	uint32 Diamond; 
+	uint32 RecentRecharge; 
+	uint16 RechargeTimes; 
+	uint32 RechargeTotal; 
+} account_record;
+
+
+typedef struct _t_arena_record
+{
+	uint64 id; 
+	uint64 player_id; 
+} arena_record;
+
+
+typedef struct _t_avatar_record
+{
+	uint64 ID; 
+	uint64 AccountID; 
+	uint64 PlayerID; 
+	uint16 PlayerLevel; 
+	uint64 CreateTime; 
+	uint64 LastLogoutTime; 
+	uint32 MaxVigor; 
+	uint32 CurVigor; 
+	uint32 Money; 
+	uint32 Experience; 
+	uint32 PlayerJob; 
+	uint16 CurChapter; 
+	uint32 PartnerExp; 
+	uint64 NormalRecruitTime; 
+	uint64 NormalBoxOpenTime; 
+	uint64 LastAddVigorTime; 
+	uint32 SmeltExp; 
+	uint32 ServedPartnerId; 
+} avatar_record;
+
+
+typedef struct _t_battlechecklog_record
+{
+	uint64 id; 
+	uint32 BattlemapId; 
+	uint64 PlayerId; 
+	uint16 CheckResult; 
+	uint64 Create_time; 
+} battlechecklog_record;
+
+
+typedef struct _t_battleinfo_record
+{
+	uint64 id; 
+	uint64 playerid; 
+	uint32 battlemapid; 
+	uint16 star; 
+	uint8 valid; 
+	uint64 last_modify_date; 
+	uint64 create_date; 
+} battleinfo_record;
+
+
+typedef struct _t_friend_record
+{
+	uint64 ID; 
+	uint64 AccountID; 
+	uint64 FriendAccountID; 
+	uint64 LastGiveVigorTime; 
+	uint64 LastAssistTime; 
+} friend_record;
+
+
+typedef struct _t_friend_battle_award_record
+{
+	uint64 id; 
+	uint64 player_id; 
+	uint32 award_exp; 
+	uint32 award_silver; 
+	uint32 award_vigor; 
+	uint64 create_time; 
+} friend_battle_award_record;
+
+
+typedef struct _t_item_record
+{
+	uint64 ID; 
+	uint64 PlayerID; 
+	uint32 ItemID; 
+	uint8 ItemPos; 
+	uint8 ItemNum; 
+} item_record;
+
+
+typedef struct _t_mounts_record
+{
+	uint64 ID; 
+	uint64 PlayerID; 
+	uint32 MountsID; 
+	uint16 MountsExp; 
+} mounts_record;
+
+
+typedef struct _t_pet_record
+{
+	uint64 ID; 
+	uint64 PlayerID; 
+	uint32 PetID; 
+	uint16 PetExp; 
+} pet_record;
+
+
+typedef struct _t_player_arena_info_record
+{
+	uint64 id; 
+	uint64 player_id; 
+	uint32 num; 
+	uint64 date; 
+	uint32 cd_time; 
+	uint64 cd_start; 
+} player_arena_info_record;
+
+
+typedef struct _t_relice_record
+{
+	uint64 ID; 
+	uint64 PlayerID; 
+	uint32 ReliceID; 
+	uint8 ActiveAttr; 
+	uint16 GemHole1Level; 
+	uint32 GemHole1CurExp; 
+	uint16 GemHole2Level; 
+	uint16 GemHole2CurExp; 
+	uint16 GemHole3Level; 
+	uint16 GemHole3CurExp; 
+} relice_record;
+
+
+typedef struct _t_skill_record
+{
+	uint64 ID; 
+	uint64 PlayerID; 
+	uint32 SkillID; 
+	uint8 SkillType; 
+	uint8 SkillLevel; 
+	uint8 SkillPos; 
+	uint8 valid; 
+	uint64 create_date; 
+	uint64 last_modify_date; 
+} skill_record;
+
+

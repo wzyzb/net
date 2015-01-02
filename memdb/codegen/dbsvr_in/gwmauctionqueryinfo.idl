@@ -1,0 +1,5 @@
+typedef struct _t_gwm_auctionqueryinfo_req : public IRequest
+{
+	uint32 m_nPlayerID;
+	uint32 m_nUniqueID;
+}CGWMAuctionQueryInfoRequest;
